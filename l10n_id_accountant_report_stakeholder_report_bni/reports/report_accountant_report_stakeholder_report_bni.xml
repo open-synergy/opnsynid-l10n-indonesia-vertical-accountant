@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data noupdate="1">
+    <!-- Aeroo Report -->
+    <!-- Accountant Report Stakeholder Report BRI -->
+    <record
+            id="report_accountant_report_stakeholder_report_bni_odt_pdf"
+            model="ir.actions.report.xml"
+        >
+        <field name="name">Accountant Report Stakeholder Report BNI ODT PDF</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">accountant.report_stakeholder_report</field>
+        <field
+                name="report_name"
+            >report_accountant_report_stakeholder_report_bni_odt_pdf</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-odt</field>
+        <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_ods" />
+        <field
+                name="parser_loc"
+            >l10n_id_accountant_report_stakeholder_report_bni/reports/parser_accountant_report_stakeholder_report_bni.py</field>
+        <field
+                name="report_rml"
+            >l10n_id_accountant_report_stakeholder_report_bni/reports/accountant_report_stakeholder_report_bni.odt</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+    </record>
+
+</data>
+</openerp>
