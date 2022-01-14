@@ -4,8 +4,14 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <openerp>
 <data>
-<record id="base_sequence_accountant_laporan_kegiatan_ojk" model="base.sequence_configurator">
-    <field name="model_id" ref="l10n_id_laporan_kap_ojk.model_accountant_laporan_kegiatan_ojk" />
+<record
+            id="base_sequence_accountant_laporan_kegiatan_ojk"
+            model="base.sequence_configurator"
+        >
+    <field
+                name="model_id"
+                ref="l10n_id_laporan_kap_ojk.model_accountant_laporan_kegiatan_ojk"
+            />
     <field
                 name="sequence_field_id"
                 search="[('model_id.model','=','accountant.laporan_kegiatan_ojk'),('name','=','name')]"

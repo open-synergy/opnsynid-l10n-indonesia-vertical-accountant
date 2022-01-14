@@ -31,7 +31,6 @@
         "views/laporan_kegiatan_ojk_views.xml",
         "views/res_partner_sector_views.xml",
     ],
-    "demo": [
-    ],
+    "demo": [],
     "installable": True,
 }

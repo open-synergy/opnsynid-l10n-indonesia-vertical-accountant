@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <openerp>
 <data>
 <record id="accountant_laporan_kegiatan_ojk_view_form" model="ir.ui.view">
@@ -7,10 +7,31 @@
     <field name="arch" type="xml">
         <form>
             <header>
-                <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" attrs="{'invisible':['|',('state','!=','draft'),('confirm_ok','=',False)]}"/>
-                <button name="%(base_cancel_reason.base_cancel_reason_wizard_action)d" type="action" string="Cancel" attrs="{'invisible':['|',('state','=','cancel'),('cancel_ok','=',False)]}" confirm="Are you sure?"/>
-                <button name="action_restart" type="object" string="Restart" attrs="{'invisible':['|',('state','!=','cancel'),('restart_ok','=',False)]}"/>
-                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,valid"/>
+                <button
+                            name="action_confirm"
+                            type="object"
+                            string="Confirm"
+                            class="oe_highlight"
+                            attrs="{'invisible':['|',('state','!=','draft'),('confirm_ok','=',False)]}"
+                        />
+                <button
+                            name="%(base_cancel_reason.base_cancel_reason_wizard_action)d"
+                            type="action"
+                            string="Cancel"
+                            attrs="{'invisible':['|',('state','=','cancel'),('cancel_ok','=',False)]}"
+                            confirm="Are you sure?"
+                        />
+                <button
+                            name="action_restart"
+                            type="object"
+                            string="Restart"
+                            attrs="{'invisible':['|',('state','!=','cancel'),('restart_ok','=',False)]}"
+                        />
+                <field
+                            name="state"
+                            widget="statusbar"
+                            statusbar_visible="draft,confirm,valid"
+                        />
             </header>
             <field name="need_validation" invisible="1" />
             <field name="validated" invisible="1" />
@@ -42,62 +63,79 @@
                 </p>
             </div>
             <sheet>
-                <div class="oe_right oe_button_box" style="width: 300px;" name="buttons">
+                <div
+                            class="oe_right oe_button_box"
+                            style="width: 300px;"
+                            name="buttons"
+                        >
                 </div>
                 <div class="oe_left" style="width: 500px;">
                     <div class="oe_title" style="width: 500px;">
-                        <label for="name"/>
+                        <label for="name" />
                         <h1>
-                            <field name="name" class="oe_edit_only" readonly="1"/>
-                            <field name="display_name" class="oe_read_only"/>
+                            <field name="name" class="oe_edit_only" readonly="1" />
+                            <field name="display_name" class="oe_read_only" />
                         </h1>
                         <h2 attrs="{'invisible': [('state', '!=', 'cancel')]}">
-                            <label for="cancel_reason_id" string="Cancellation reason:"/>
-                            <field name="cancel_reason_id" class="oe_inline"/>
+                            <label
+                                        for="cancel_reason_id"
+                                        string="Cancellation reason:"
+                                    />
+                            <field name="cancel_reason_id" class="oe_inline" />
                         </h2>
                     </div>
                 </div>
                 <group name="group_1" colspan="4" col="2">
                     <group name="group_1_1" colspan="1" col="2">
-                        <field name="company_id" groups="base.group_multi_company"/>
-                        <field name="pimpinan_rekan_id"/>
-                        <field name="date_report"/>
-                        <field name="date_start"/>
-                        <field name="date_end"/>
+                        <field name="company_id" groups="base.group_multi_company" />
+                        <field name="pimpinan_rekan_id" />
+                        <field name="date_report" />
+                        <field name="date_start" />
+                        <field name="date_end" />
                     </group>
                 </group>
                 <notebook>
                     <page name="client" string="Accountant Reports">
-                        <field name="accountant_report_ids" colspan="4" nolabel="1"/>
+                        <field name="accountant_report_ids" colspan="4" nolabel="1" />
                     </page>
                     <page name="page_note" string="Note">
-                        <field name="note" colspan="4" nolabel="1"/>
+                        <field name="note" colspan="4" nolabel="1" />
                     </page>
                     <page string="Reviews" name="tier_validation">
                         <group name="group_validation" colspan="4" col="2">
                             <field
-                                name="definition_id"
-                                groups="l10n_id_laporan_kap_ojk.accountant_ojk_multiple_approval_setting_group"/>
+                                        name="definition_id"
+                                        groups="l10n_id_laporan_kap_ojk.accountant_ojk_multiple_approval_setting_group"
+                                    />
                             <field
-                                name="reviewer_partner_ids"
-                                widget="many2many_tags"/>
+                                        name="reviewer_partner_ids"
+                                        widget="many2many_tags"
+                                    />
                         </group>
                         <group name="tier_validation_2" colspan="4" col="2">
                             <field name="review_ids" readonly="1" />
                         </group>
                     </page>
-                    <page name="page_policy" string="Policy" groups="l10n_id_laporan_kap_ojk.accountant_ojk_workflow_policy_setting_group">
+                    <page
+                                name="page_policy"
+                                string="Policy"
+                                groups="l10n_id_laporan_kap_ojk.accountant_ojk_workflow_policy_setting_group"
+                            >
                         <group name="group_policy_1" colspan="4" col="2">
-                            <field name="confirm_ok"/>
-                            <field name="cancel_ok"/>
-                            <field name="restart_ok"/>
+                            <field name="confirm_ok" />
+                            <field name="cancel_ok" />
+                            <field name="restart_ok" />
                         </group>
                     </page>
                 </notebook>
             </sheet>
             <div class="oe_chatter">
-                <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
-                <field name="message_ids" widget="mail_thread"/>
+                <field
+                            name="message_follower_ids"
+                            widget="mail_followers"
+                            groups="base.group_user"
+                        />
+                <field name="message_ids" widget="mail_thread" />
             </div>
         </form>
     </field>
@@ -108,13 +146,13 @@
     <field name="model">accountant.laporan_kegiatan_ojk</field>
     <field name="arch" type="xml">
         <tree>
-            <field name="id"/>
-            <field name="name"/>
-            <field name="pimpinan_rekan_id"/>
-            <field name="date_report"/>
-            <field name="date_start"/>
-            <field name="date_end"/>
-            <field name="state"/>
+            <field name="id" />
+            <field name="name" />
+            <field name="pimpinan_rekan_id" />
+            <field name="date_report" />
+            <field name="date_start" />
+            <field name="date_end" />
+            <field name="state" />
         </tree>
     </field>
 </record>
@@ -124,30 +162,90 @@
     <field name="model">accountant.laporan_kegiatan_ojk</field>
     <field name="arch" type="xml">
         <search>
-            <field name="name"/>
-            <field name="pimpinan_rekan_id"/>
-            <field name="date_report"/>
-            <field name="date_start"/>
-            <field name="date_end"/>
-            <field name="state"/>
+            <field name="name" />
+            <field name="pimpinan_rekan_id" />
+            <field name="date_report" />
+            <field name="date_start" />
+            <field name="date_end" />
+            <field name="state" />
             <group name="group_state" string="State">
-                <filter name="filter_draft" string="Draft" domain="[('state','=','draft')]"/>
-                <filter name="filter_confirm" string="Waiting for Approval" domain="[('state','=','confirm')]"/>
-                <filter name="filter_valid" string="Valid" domain="[('state','=','valid')]"/>
-                <filter name="filter_cancel" string="Cancel" domain="[('state','=','cancel')]"/>
+                <filter
+                            name="filter_draft"
+                            string="Draft"
+                            domain="[('state','=','draft')]"
+                        />
+                <filter
+                            name="filter_confirm"
+                            string="Waiting for Approval"
+                            domain="[('state','=','confirm')]"
+                        />
+                <filter
+                            name="filter_valid"
+                            string="Valid"
+                            domain="[('state','=','valid')]"
+                        />
+                <filter
+                            name="filter_cancel"
+                            string="Cancel"
+                            domain="[('state','=','cancel')]"
+                        />
             </group>
             <group name="group_by" string="Group By..">
-                <filter name="grp_pimpinan_rekan_id" string="Pimpinan Rekan" context="{'group_by':'pimpinan_rekan_id'}"/>
-                <filter name="grp_report_date_year" string="Date Report by Year" context="{'group_by':'date_report:year'}"/>
-                <filter name="grp_report_date_month" string="Date Report by Month" context="{'group_by':'date_report:month'}"/>
-                <filter name="grp_report_date_day" string="Date Report by Day" context="{'group_by':'date_report:day'}"/>
-                <filter name="grp_start_date_year" string="Date Start by Year" context="{'group_by':'date_start:year'}"/>
-                <filter name="grp_start_date_month" string="Date Start by Month" context="{'group_by':'date_start:month'}"/>
-                <filter name="grp_start_date_day" string="Date Start by Day" context="{'group_by':'date_start:day'}"/>
-                <filter name="grp_end_date_year" string="Date End by Year" context="{'group_by':'date_end:year'}"/>
-                <filter name="grp_end_date_month" string="Date End by Month" context="{'group_by':'date_end:month'}"/>
-                <filter name="grp_end_date_day" string="Date End by Day" context="{'group_by':'date_end:day'}"/>
-                <filter name="grp_state" string="State" context="{'group_by':'state'}"/>
+                <filter
+                            name="grp_pimpinan_rekan_id"
+                            string="Pimpinan Rekan"
+                            context="{'group_by':'pimpinan_rekan_id'}"
+                        />
+                <filter
+                            name="grp_report_date_year"
+                            string="Date Report by Year"
+                            context="{'group_by':'date_report:year'}"
+                        />
+                <filter
+                            name="grp_report_date_month"
+                            string="Date Report by Month"
+                            context="{'group_by':'date_report:month'}"
+                        />
+                <filter
+                            name="grp_report_date_day"
+                            string="Date Report by Day"
+                            context="{'group_by':'date_report:day'}"
+                        />
+                <filter
+                            name="grp_start_date_year"
+                            string="Date Start by Year"
+                            context="{'group_by':'date_start:year'}"
+                        />
+                <filter
+                            name="grp_start_date_month"
+                            string="Date Start by Month"
+                            context="{'group_by':'date_start:month'}"
+                        />
+                <filter
+                            name="grp_start_date_day"
+                            string="Date Start by Day"
+                            context="{'group_by':'date_start:day'}"
+                        />
+                <filter
+                            name="grp_end_date_year"
+                            string="Date End by Year"
+                            context="{'group_by':'date_end:year'}"
+                        />
+                <filter
+                            name="grp_end_date_month"
+                            string="Date End by Month"
+                            context="{'group_by':'date_end:month'}"
+                        />
+                <filter
+                            name="grp_end_date_day"
+                            string="Date End by Day"
+                            context="{'group_by':'date_end:day'}"
+                        />
+                <filter
+                            name="grp_state"
+                            string="State"
+                            context="{'group_by':'state'}"
+                        />
             </group>
         </search>
     </field>
@@ -158,23 +256,25 @@
     <field name="res_model">accountant.laporan_kegiatan_ojk</field>
     <field name="view_type">form</field>
     <field name="view_mode">tree,form</field>
-    <field name="search_view_id" ref="accountant_laporan_kegiatan_ojk_view_search"/>
+    <field name="search_view_id" ref="accountant_laporan_kegiatan_ojk_view_search" />
     <field name="domain">[]</field>
     <field name="context">{}</field>
 </record>
 
 <menuitem
-    id="accountant_laporan_kegiatan_ojk_root"
-    name="OJK"
-    parent="accountant_app.accountant_main_menu"
-    sequence="50"/>
+            id="accountant_laporan_kegiatan_ojk_root"
+            name="OJK"
+            parent="accountant_app.accountant_main_menu"
+            sequence="50"
+        />
 
 <menuitem
-    id="accountant_laporan_kegiatan_ojk_menu"
-    name="Kegiatan Pemberian Jasa"
-    parent="accountant_laporan_kegiatan_ojk_root"
-    action="accountant_laporan_kegiatan_ojk_action"
-    sequence="1"/>
+            id="accountant_laporan_kegiatan_ojk_menu"
+            name="Kegiatan Pemberian Jasa"
+            parent="accountant_laporan_kegiatan_ojk_root"
+            action="accountant_laporan_kegiatan_ojk_action"
+            sequence="1"
+        />
 
 </data>
 </openerp>

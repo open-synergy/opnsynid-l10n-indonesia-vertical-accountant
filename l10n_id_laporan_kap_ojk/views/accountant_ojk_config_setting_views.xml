@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2021 OpenSynergy Indonesia
      Copyright 2021 PT. Simetri Sinergi Indonesia
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
- <openerp>
+<openerp>
  <data>
 
      <record id="accountant_ojk_config_setting_view_form" model="ir.ui.view">
@@ -13,34 +12,60 @@
          <field name="arch" type="xml">
              <form class="oe_form_configuration">
                  <header>
-                     <button name="execute" string="Apply" type="object" class="oe_highlight"/>
+                     <button
+                            name="execute"
+                            string="Apply"
+                            type="object"
+                            class="oe_highlight"
+                        />
                      or
-                     <button name="cancel" string="Cancel" type="object" class="oe_link"/>
+                     <button
+                            name="cancel"
+                            string="Cancel"
+                            type="object"
+                            class="oe_link"
+                        />
                  </header>
-                 <field name="company_id" invisible="1"/>
-                 <separator string="Kegiatan Pemberian Jasa"/>
+                 <field name="company_id" invisible="1" />
+                 <separator string="Kegiatan Pemberian Jasa" />
                  <group name="accountant_ojk_config_setting">
-                     <label for="id" string="General"/>
+                     <label for="id" string="General" />
                      <div>
                          <div>
-                             <label for="id" string="Sequence" class="oe_inline"/>
-                             <field name="accountant_ojk_sequence_id" class="oe_inline" domain="[('code','=','accountant.laporan_kegiatan_ojk')]"/>
+                             <label for="id" string="Sequence" class="oe_inline" />
+                             <field
+                                    name="accountant_ojk_sequence_id"
+                                    class="oe_inline"
+                                    domain="[('code','=','accountant.laporan_kegiatan_ojk')]"
+                                />
                          </div>
                      </div>
                  </group>
                  <group name="accountant_ojk_config_group_config">
-                     <label for="id" string="Allowed Groups"/>
+                     <label for="id" string="Allowed Groups" />
                      <div>
                          <div>
-                             <label for="id" string="To Confirm" class="oe_inline"/>
-                             <field name="accountant_ojk_confirm_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                             <label for="id" string="To Confirm" class="oe_inline" />
+                             <field
+                                    name="accountant_ojk_confirm_grp_ids"
+                                    widget="many2many_tags"
+                                    class="oe_inline"
+                                />
                          </div>                         <div>
-                             <label for="id" string="To Cancel" class="oe_inline"/>
-                             <field name="accountant_ojk_cancel_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                             <label for="id" string="To Cancel" class="oe_inline" />
+                             <field
+                                    name="accountant_ojk_cancel_grp_ids"
+                                    widget="many2many_tags"
+                                    class="oe_inline"
+                                />
                          </div>
                          <div>
-                             <label for="id" string="To Restart" class="oe_inline"/>
-                             <field name="accountant_ojk_restart_grp_ids" widget="many2many_tags" class="oe_inline"/>
+                             <label for="id" string="To Restart" class="oe_inline" />
+                             <field
+                                    name="accountant_ojk_restart_grp_ids"
+                                    widget="many2many_tags"
+                                    class="oe_inline"
+                                />
                          </div>
                      </div>
                  </group>
@@ -59,18 +84,19 @@
      </record>
 
      <menuitem
-         id="accountant_ojk_config_setting_root"
-         name="OJK"
-         parent="accountant_app.accountant_configuration_menu"
-         sequence="50"/>
+            id="accountant_ojk_config_setting_root"
+            name="OJK"
+            parent="accountant_app.accountant_configuration_menu"
+            sequence="50"
+        />
 
      <menuitem
-         id="accountant_ojk_config_setting_menu"
-         name="Configuration"
-         parent="accountant_ojk_config_setting_root"
-         action="accountant_ojk_config_setting_action"
-         sequence="1"
-         />
+            id="accountant_ojk_config_setting_menu"
+            name="Configuration"
+            parent="accountant_ojk_config_setting_root"
+            action="accountant_ojk_config_setting_action"
+            sequence="1"
+        />
 
 
  </data>
