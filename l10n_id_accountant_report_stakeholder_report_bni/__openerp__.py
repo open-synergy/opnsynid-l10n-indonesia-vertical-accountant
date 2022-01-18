@@ -9,7 +9,6 @@
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
     "depends": [
-        "accountant_report_stakeholder_report",
         "report_aeroo",
     ],
     "data": [
