@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 OpenSynergy Indonesia
+     Copyright 2022 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<openerp>
+    <data>
+
+        <record
+            id="base_workflow_accountant_report_stakeholder_report_bni"
+            model="base.workflow_policy"
+        >
+            <field
+                name="model_id"
+                ref="l10n_id_accountant_report_stakeholder_report_bni.model_accountant_report_stakeholder_report_bni"
+            />
+        </record>
+
+        <record
+            id="base_workflow_line_accountant_report_stakeholder_report_bni_confirm"
+            model="base.workflow_policy_line"
+        >
+            <field
+                name="workflow_id"
+                ref="l10n_id_accountant_report_stakeholder_report_bni.base_workflow_accountant_report_stakeholder_report_bni"
+            />
+            <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.report_stakeholder_report_bni'),('name','=','confirm_ok')]"
+            />
+            <field name="python_code">
+                result = document.type_id.confirm_grp_ids.ids
+            </field>
+        </record>
+
+        <record
+            id="base_workflow_line_accountant_report_stakeholder_report_bni_cancel"
+            model="base.workflow_policy_line"
+        >
+            <field
+                name="workflow_id"
+                ref="l10n_id_accountant_report_stakeholder_report_bni.base_workflow_accountant_report_stakeholder_report_bni"
+            />
+            <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.report_stakeholder_report_bni'),('name','=','cancel_ok')]"
+            />
+            <field name="python_code">
+                result = document.type_id.cancel_grp_ids.ids
+            </field>
+        </record>
+
+        <record
+            id="base_workflow_line_accountant_report_stakeholder_report_bni_restart"
+            model="base.workflow_policy_line"
+        >
+            <field
+                name="workflow_id"
+                ref="l10n_id_accountant_report_stakeholder_report_bni.base_workflow_accountant_report_stakeholder_report_bni"
+            />
+            <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.report_stakeholder_report_bni'),('name','=','restart_ok')]"
+            />
+            <field name="python_code">
+                result = document.type_id.restart_grp_ids.ids
+            </field>
+        </record>
+
+        <record
+            id="base_workflow_line_accountant_report_stakeholder_report_bni_restart_validation"
+            model="base.workflow_policy_line"
+        >
+            <field
+                name="workflow_id"
+                ref="l10n_id_accountant_report_stakeholder_report_bni.base_workflow_accountant_report_stakeholder_report_bni"
+            />
+            <field
+                name="field_id"
+                search="[('model_id.model','=','accountant.report_stakeholder_report_bni'),('name','=','restart_validation_ok')]"
+            />
+            <field name="python_code">
+                result = document.type_id.restart_validation_grp_ids.ids
+            </field>
+        </record>
+
+    </data>
+</openerp>
