@@ -8,7 +8,7 @@
             id="report_stakeholder_report_bni"
             model="accountant.report_stakeholder_report_type"
         >
-        <field name="name">BNI</field>
+        <field name="name">Bank Negara Indonesia</field>
         <field name="code">BNI</field>
         <field name="domain">BNI</field>
     </record>

@@ -12,7 +12,7 @@
                 name="name"
                 ref="l10n_id_accountant_report_stakeholder_report_bni.model_accountant_report_stakeholder_report_bni"
             />
-            <field name="method_cancel_name">workflow_action_cancel</field>
+            <field name="method_cancel_name">action_cancel</field>
         </record>
     </data>
 </openerp>
