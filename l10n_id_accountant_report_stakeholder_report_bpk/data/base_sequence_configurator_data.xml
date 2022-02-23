@@ -26,8 +26,7 @@
                 ref="l10n_id_accountant_report_stakeholder_report_bpk.base_sequence_stakeholder_bpk"
             />
     <field name="sequence" eval="1" />
-    <field name="sequence_computation_code">result = False
-result = document.type_id.sequence_id
+    <field name="sequence_computation_code">result = document.type_id.sequence_id
     </field>
 </record>
 

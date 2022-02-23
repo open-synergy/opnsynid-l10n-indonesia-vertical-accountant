@@ -27,7 +27,7 @@
                 name="field_id"
                 search="[('model_id.model','=','accountant.report_stakeholder_report_bpk'),('name','=','confirm_ok')]"
             />
-    <field name="python_code">result = allowed_wokflow_policy.confirm_grp_ids.ids
+    <field name="python_code">result = document.type_id.confirm_grp_ids.ids
     </field>
 </record>
 
@@ -43,7 +43,7 @@
                 name="field_id"
                 search="[('model_id.model','=','accountant.report_stakeholder_report_bpk'),('name','=','cancel_ok')]"
             />
-    <field name="python_code">result = allowed_wokflow_policy.cancel_grp_ids.ids
+    <field name="python_code">result = document.type_id.cancel_grp_ids.ids
     </field>
 </record>
 
@@ -59,7 +59,7 @@
                 name="field_id"
                 search="[('model_id.model','=','accountant.report_stakeholder_report_bpk'),('name','=','restart_ok')]"
             />
-    <field name="python_code">result = allowed_wokflow_policy.restart_grp_ids.ids
+    <field name="python_code">result = document.type_id.restart_grp_ids.ids
     </field>
 </record>
 
@@ -75,9 +75,7 @@
                 name="field_id"
                 search="[('model_id.model','=','accountant.report_stakeholder_report_bpk'),('name','=','restart_validation_ok')]"
             />
-    <field
-                name="python_code"
-            >result = allowed_wokflow_policy.restart_validation_grp_ids.ids
+    <field name="python_code">result = document.type_id.restart_validation_grp_ids.ids
     </field>
 </record>
 
