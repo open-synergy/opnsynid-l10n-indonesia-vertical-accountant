@@ -12,5 +12,6 @@
 # sale-workflow https://github.com/OCA/sale-workflow
 #
 # To provide both the URL and a branch, use:
-oca_partner_contact https://github.com/OCA/partner-contact.git 8.0
+oca-partner-contact https://github.com/OCA/partner-contact.git 8.0
 opnsynid-vertical-accountant https://github.com/open-synergy/opnsynid-vertical-accountant.git 8.0
+opnsynid-service-contract https://github.com/open-synergy/opnsynid-service-contract.git 8.0
