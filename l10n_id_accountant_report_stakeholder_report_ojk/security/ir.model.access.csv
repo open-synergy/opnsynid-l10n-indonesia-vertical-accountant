@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_accountant_report_stakeholder_report_ojk_user,accountant.report_stakeholder_report_ojk - Employee,model_accountant_report_stakeholder_report_ojk,base.group_user,1,1,1,1
 access_accountant_report_stakeholder_report_ojk_all,accountant.report_stakeholder_report_ojk - All,model_accountant_report_stakeholder_report_ojk,,1,0,0,0
+access_accountant_report_stakeholder_report_ojk_query_all,accountant.report_stakeholder_report_ojk_query - All,model_accountant_report_stakeholder_report_ojk_query,,1,0,0,0
