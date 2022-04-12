@@ -5,12 +5,15 @@
 
 {
     "name": "OJK Stakeholder Report for Accountant Report",
-    "version": "8.0.1.0.1",
+    "version": "8.0.2.0.0",
     "author": "PT. Simetri Sinergi Indonesia, OpenSynergy Indonesia",
     "website": "https://simetri-sinergi.id",
     "license": "AGPL-3",
     "depends": [
         "accountant_report_stakeholder_report",
+        "accountant_report_sector",
+        "service_contract",
+        "accountant_report_project",
     ],
     "data": [
         "security/ir.model.access.csv",
@@ -20,6 +23,7 @@
         "data/base_cancel_reason_configurator_data.xml",
         "data/base_workflow_policy_stakeholder_report_ojk_data.xml",
         "views/accountant_report_stakeholder_report_ojk_views.xml",
+        "views/res_partner_sector_views.xml",
     ],
     "demo": [
         "demo/tier_definition_demo.xml",
